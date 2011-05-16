@@ -46,7 +46,7 @@ package cmvc
 		/**
 		 * If value is true, notificaiton will be handled by all subscribed mediators in the same time in parallel
 		 */ 
-		public var useMultyThreading:Boolean = true;
+		public var useMultyThreading:Boolean = false;
 		
 		
 		/**
