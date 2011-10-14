@@ -318,6 +318,7 @@ package cmvc
 		protected function hasMediator(value:ICMediator):Boolean{
 			for(var i:int = 0; i < registeredCMediators.length; i++){
 				var m:CMediator = registeredCMediators[i];
+				if(m == null)return false;
 				if(m.getName() == value.getName()){
 					return true;
 				}
@@ -333,6 +334,7 @@ package cmvc
 		protected function hasModel(value:ICModel):Boolean{
 			for(var i:int = 0; i < registeredModels.length; i++){
 				var m:CModel = registeredModels[i];
+				if(m == null)return false;
 				if(m.getName() == value.getName())
 					return true;
 			}
