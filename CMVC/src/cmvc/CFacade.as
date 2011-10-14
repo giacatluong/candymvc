@@ -117,6 +117,7 @@ package cmvc
 		public function removeMediator(mediatorName:String):void{
 			for(var i:int = 0; i < registeredCMediators.length; i++){
 				var m:CMediator = registeredCMediators[i];
+				if(m == null)return;
 				if(m.getName() == mediatorName){
 					m.registerFacade(null);
 					delete registeredCMediators[i];
@@ -131,6 +132,7 @@ package cmvc
 		public function retrieveMediator(mediatorName:String):ICMediator{
 			for(var i:int = 0; i < registeredCMediators.length; i++){
 				var m:CMediator = registeredCMediators[i];
+				if(m == null)return null;
 				if(m.getName() == mediatorName){
 					return m;
 				}
@@ -155,6 +157,7 @@ package cmvc
 		public function removeModel(name:String):void{
 			for(var i:int = 0; i < registeredModels.length; i++){
 				var m:CModel = registeredModels[i];
+				if(m == null)return;
 				if(m.getName() == name){
 					m.registerFacade(null);
 					delete registeredModels[i];
@@ -169,6 +172,7 @@ package cmvc
 		public function retrieveModel(modelName:String):ICModel{
 			for(var i:int = 0; i < registeredModels.length; i++){
 				var m:ICModel = registeredModels[i];
+				if(m == null)return null;
 				if(m.getName() == modelName){
 					return m;
 				}
@@ -190,6 +194,7 @@ package cmvc
 		 */ 
 		public function removeControler(notificationName:String):void{
 			var cnt:Controler = registeredControlers[notificationName];
+			if(cnt == null)return;
 			cnt.registerFacade(null);
 			cnt = null;
 			registeredControlers[notificationName] = null;
