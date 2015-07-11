@@ -1,0 +1,3 @@
+CMVC (CandyMVC) is ActionScript 3 lightweight framework based upon Model, View, Controller.
+It enables implementation of MVC with no special setup required. Instead of overriding bunch of methods to setup the project, it lets you start working on application logic as soon as project is created.
+One of the main features is multi threading - it can handle notification in near real time by all subscribed mediators. Because of technology limitation, multi threading is not supported in ActionScript 3, so CMVC solution is actually a workaround.
